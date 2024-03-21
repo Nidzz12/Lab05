@@ -61,8 +61,6 @@ public class MainActivityTest {
         textView.check(matches(withText("You shall not pass!")));
     }
 
-
-
     public void FindMissingUpperLetter(){
         //find the view
         ViewInteraction appcompactEditText= onView(withId(R.id.passwordEditText));
@@ -109,20 +107,22 @@ public class MainActivityTest {
         //check the text
         textview.check(matches(withText("You Shall not Pass")));
     }
-    public void FindMissingSpecialLetter(){
+    public void FindMissingSpecialLetter() {
         //find the view
-        ViewInteraction appcompactEditText= onView(withId(R.id.passwordEditText));
+        ViewInteraction appcompactEditText = onView(withId(R.id.passwordEditText));
         //type the password Nidhi1234
         appcompactEditText.perform(replaceText("Nidhi1234"));
         //find the Button
-        ViewInteraction button= onView(withId(R.id.checkButton));
+        ViewInteraction button = onView(withId(R.id.checkButton));
         //click the Button
         button.perform(click());
 
         //find the TextView
-        ViewInteraction textview =onView(withId(R.id.textView));
+        ViewInteraction textview = onView(withId(R.id.textView));
         //check the text
         textview.check(matches(withText("You Shall not Pass")));
+
     }
     }
+
 
